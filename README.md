@@ -1,4 +1,5 @@
 "# Eyodd2026b" 
+![alt text](image.png)
 # Estructura y organización de datos
 _Repositorio_ de la materia de estructura y organización de datos
 ##COMPETENCIAS A DESARROLLAR
