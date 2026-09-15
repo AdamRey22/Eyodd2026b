@@ -1,11 +1,24 @@
 "# Eyodd2026b" 
 ![alt text](image.png)
-# Estructura y organización de datos
-_Repositorio_ de la materia de estructura y organización de datos
-##COMPETENCIAS A DESARROLLAR
-(ponerlo del link que envió en teams)
-##CONTENIDO
-* unidad 1 * Fundamentos de estructura de datos 
-* unidad 2 * Estructuras Lineales 
-* unidad 3 * Estructuras no lineales
-* unidad 4 * Metodos de ordenamiento y búsqueda
+# Estrusctura y Organización de datos 
+__Repositorio__ de la materia de estructura y organización de datos, semestre 2026B
+
+## Competencias a desarrollar
+
+Identifica, selecciona y aplica eficientemente tipos de datos abstractos, métodos de ordenamiento y búsqueda para la optimización del rendimiento de soluciones de problemas del mundo real.
+
+## Contenido
+**Unidad 1**
+Fundamentos de estructura de datos
+
+**Unidad 2**
+Estructuras lineales
+
+**Unidad 3**
+Estructuras no lineales
+
+**Unidad 4**
+Métodos de ordenamiento y búsqueda
+
+
+cambio en el code space
