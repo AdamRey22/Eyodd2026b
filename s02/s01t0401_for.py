@@ -8,7 +8,7 @@ calculara la suma del 1 al 100
 #Importarmos biblioteca time
 import time
 
-# Creando una marca de tiempo
+#Tomando el tiempo inical 
 timestamp_01 = time.time ()
 
 #Programa que calcula las sumas
@@ -17,7 +17,22 @@ timestamp_01 = time.time ()
 n = 100
 sum = 0
 
-# Ciclo for
+# Ciclo for, por cada de numero que hay de n+1 es imprimir
 for number in range(1, n+1):
-    print(str(number) + " ")
-
+    sum = sum + number
+    #la primera vez que se ejecuta el ciclo
+    #1: sum < - 0 + 1
+    # sum = 1
+    # 2: sum <- 1 + 2 
+    # sum = 3
+    # 3: sum <- 3 + 3
+    #...
+    #100: sum <- antSum_(-1) + 100
+    #Asi tenemos los numeros sumados hasta 100
+    #string permite combinar una salida con las variables 
+print(f"La suma de los números del 1 al {n} es : {sum}")
+#formato f, string con F, combinar los valores con f
+#Tomando el tiempo final 
+timestamp_02 = time.time ()
+#Impresion del tiempo de ejecusion
+print(f"Tiempo de ejecucion: {(timestamp_02-timestamp_01) * 1e6} μsegundos")
