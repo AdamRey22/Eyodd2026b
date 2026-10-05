@@ -17,7 +17,7 @@ def sum_of_n( n):
     total_sum = 0
         #Sumando los "n" numeros naturales con un ciclo for
         #ciclo for
-    for number in range(1, n+1):
+    for number in range(1,11):
         total_sum = total_sum + number
     #Retornando el total de suma de los "n" numeros naturales        
     return total_sum    
