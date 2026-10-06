@@ -16,4 +16,4 @@ def random_function(students):
 print(random_function(student_list_01))
 
 # Calcular O(?)
-#ejercicio bigO final calcularlo
+#ejercicio bigO final calcular
