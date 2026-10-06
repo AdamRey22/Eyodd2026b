@@ -19,7 +19,7 @@ def sum_of_n( n):
 dataset = []
 
 repetition = 1
-while repetition <= 6:
+while repetition <= 10:
     
     timestamp_01 = time.time ()
 
