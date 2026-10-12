@@ -23,3 +23,4 @@ for num in my_array:
  for i in range(len(my_array)):
     if my_array[i] % 2 == 0:
         print(f"Elemento num {i+1}: {my_array[i]}")
+#sesion lunes
