@@ -1,26 +1,11 @@
 import array as arr
-#creacion de un arreglo
-#i = Entero con signo
-#Numero Decimal 
-#Numero decimal doble
-#Caracteres unicode
-my_array = arr.array ('i',[10, 22, 300, 3, 7, 40, 55, 654, 22])
+my_array = arr.array ('i',[10, 300, 3, 7, 40, 55, 654, 22, 17])
 
-#iteraccion automatica
-for num in my_array:
-#   print(num)
+print(f"localizando 22: {my_array.index(22)}")
 
-#Acceso individual a los elementos
-#print(my_array[0]) #Primer elemento
-#print(my_array[1]) #Segundo elemento
-#print(my_array[2]) #Tercer elemento
+num_to_search = 200
 
-#Tamaño de un arreglo
-#Lenght
-#print(len(my_array))
-
-#Iteraccion de indices
- for i in range(len(my_array)):
-    if my_array[i] % 2 == 0:
-        print(f"Elemento num {i+1}: {my_array[i]}")
-#sesion lunes
+try:
+  print(f"Localizado {num_to_search}: {my_array.index(num_to_search)}")
+except:
+  print("⚠️ Numero no encontrado!!!")
