@@ -9,6 +9,8 @@ print_array(my_array)
 
 #Buscar el, elemento 17 en el arreglo
 number_to_search = 20
+counter = 0
+print(f"Se busca {number_to_search} en el arreglo.")
 for integer in my_array:
     if integer == number_to_search:
         print("🙀 numero enconytrado")
