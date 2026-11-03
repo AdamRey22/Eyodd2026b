@@ -1,55 +1,62 @@
 from array import array as arr
+from enum import Enum
 
-# Parametros de mi cuadricula 
-rows = 8
-columns = 2 * rows - 1
+# Borra pantalla con caracteres ANSI 
+def clear_screen(): 
+    print("\033[2J\033[H", end="") 
 
-#Funcion para imprimi rmatrix
+# Encapsulando de los valores ANSI 
+# para colores en un enumerado
+class AnsiColor(Enum):
+    RED = "\033[91m" 
+    YELLOW = "\033[93m" 
+    CYAN = "\033[96m" 
+    RESET = "\033[0m"
+
+# Funcion para imprimir matrix
 def print_matrix(input_matrix):
-    for row in matrix:
-        print (list (row))
+    for row in input_matrix:
+        print(list(row))
 
-# Creando la reticula 
-matrix = []
+# Funcion para generar triangulo 
+def generate_triangle(rows = 1): 
+    # Parametros de mi cuadricula 
+    columns = 2 * rows - 1 
+    # Creando el grid 2D 
+    matrix = [] 
+    # Construyendo el grid 
+    for _ in range(rows): 
+        new_row = arr('i', [0] * columns) 
+        matrix.append(new_row) 
+    # Calculando el centro de la primera fila 
+    center = columns // 2 # se hace division entera 
+     
+    # Estableciendo el centro en 1 
+    matrix[0][center] = 1 
 
-# Construyendo fel grid
-for _ in  range(rows):
-    new_row = arr('i', [0] * columns)
-    matrix.append(new_row)
-
-# Validadando la construccion del Grind
-print (f"Cantidad de filas: {len(matrix)}")
-print (f"Canitdad de columnas {len(matrix[0])}")
-
-
-
-# Calculando el centro de la primera fila
-center = columns // 2 #se hace divicion entera
-
-#Estebleciendo el centro en 1
-matrix [0][center] = 1
-
-print_matrix (matrix)
-
-#Se calcula el resto de la matrix 
-#Siguiendo la logica del siperpinsky Gasket
-for row in range (1, rows):
-    for col in range(0, columns):
-        left_upper_cell = 0
-        right_upper_cell = 0
-
-#si la columna es mayopr a cero
-if col > 0:
-    left_upper_cell = matrix[row - 1][col - 1]
-
-#si la columna esta en el elemento antes del borde dercho
-if col < columns - 1:
-    right_upper_cell = matrix[row-1][col+1]
-
-if left_upper_cell != right_upper_cell:
-    matrix[row][col] = 1
-else:
-    matrix[row][col] = 0
-print()
-print_matrix(matrix)
-#modificacion de = 
+    # Se calcula el resto de la matriz 
+    # Siguiendo la logica del Sierpinski Gasket 
+    for row in range(1, rows): 
+        for col in range(0, columns): 
+            left_upper_cell = 0 
+            right_upper_cell = 0 
+         
+            # Si la columna donde estamos 
+            # es mayor a cero, es decir, esta un elemento 
+            # despues del borde izquierdo 
+            if col > 0: 
+                left_upper_cell = matrix[row-1][col-1] 
+         
+            # Si la columna esta un elemento antes 
+            # del borde derecho 
+            if col < columns - 1: 
+                right_upper_cell = matrix[row-1][col+1] 
+         
+            # Asigno valor al arreglo 
+            if left_upper_cell != right_upper_cell: 
+                matrix[row][col] = 1 
+            else: 
+                matrix[row][col] = 0 
+                
+    # Regresando la matriz 
+    return matrix
