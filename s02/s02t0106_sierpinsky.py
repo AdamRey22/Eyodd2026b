@@ -59,4 +59,29 @@ def generate_triangle(rows = 1):
                 matrix[row][col] = 0 
                 
     # Regresando la matriz 
-    return matrix
+    return matrix 
+
+# Dibuja la matriz 
+def draw_matrix(input_matrix, symbol="*"): 
+    for row in input_matrix: 
+        for cell in row: 
+            if cell == 1: 
+                print(AnsiColor.CYAN.value + symbol + AnsiColor.RESET.value, end="") 
+            else: 
+                print(AnsiColor.RED.value + " ", end="") 
+        print()
+
+# Metodo principal 
+def main(): 
+    # Genera el triangulo de Sierpinski (puedes cambiar el 5 por 15 o mas)
+    matrix = generate_triangle(100) 
+    # Limpia la pantalla antes de dibujar la matriz 
+    clear_screen() 
+    # Dibuja la matriz en pantalla 
+    draw_matrix(matrix, symbol="■") 
+    
+if __name__ == "__main__": 
+    main() 
+
+
+#Practica final final 
